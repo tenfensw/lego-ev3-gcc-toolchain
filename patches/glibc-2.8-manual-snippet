@@ -1,0 +1,7 @@
+
+
+$(objpfx)stamp.o $(objpfx)stamp.oS $(objpfx)stamp.os:
+	touch "$@"
+
+stubs:
+	#touch 

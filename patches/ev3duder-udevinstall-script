@@ -1,0 +1,5 @@
+#!/bin/sh
+BASEDIRECTORY=`dirname "$0"`
+BASEDIRECTORY=`sh -c "cd \"$BASEDIRECTORY\" && pwd"`
+chmod 777 "$BASEDIRECTORY/udev.sh.real"
+sh -c "cd \"$BASEDIRECTORY\" && ./udev.sh.real"

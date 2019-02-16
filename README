@@ -1,0 +1,21 @@
+This is an unofficial build script that builds a toolchain that can compile C and C++ programs for the LEGO Mindstorms EV3 microcontroller. It also builds ev3duder and EV3-API libraries created by the c4ev3 project (https://github.com/c4ev3/).
+
+Currently, only Linux and FreeBSD are supported. Support for other platforms is planned to be added in the future.
+
+To run this script, just run:
+
+# make
+
+This will build a GCC 4.5.1/Binutils 2.22 toolchain and install it into /opt/timkoisoft/legoev3-toolchain. If you want a GCC 7.4.0/Binutils 2.30 toolchain instead, then run this command instead:
+
+# make MODERN=1
+
+Notice that only the GCC 4.5.1 version of the LEGO EV3 toolchain was tested, so use the GCC 7.4.0 one at your own risk.
+
+If you want to install the toolchain into a different directory, set the "prefix" (without quotes) environment variable to the path where you would like to install GCC. For example:
+
+# export prefix=/usr/local/legogcctoolchain
+
+Then run make.
+
+While the Makefile is licensed under the OpenBSD/ISC License, the patches in the patches/ folder are not. See the patches/ folder for more info.
