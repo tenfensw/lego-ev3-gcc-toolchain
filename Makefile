@@ -123,9 +123,9 @@ internal-gcc-stage3:
 	cd $(PWD)/stage3-gcc-buildp1 && mkdir outofsource && cd outofsource && CC=$(CC) ../configure $(CONFIGUREFLAGS) --with-arch=armv5 --with-float=soft --enable-languages=c,c++ --disable-libquadmath --disable-libquadmath-support --disable-libssp --disable-libada --with-pkgversion="Tim's LEGO Mindstorms EV3 GCC builds" && make all-gcc && make install-gcc
 
 internal-gcc-downloadcomponents:
-	sh -c "cd \"$(gccdir)\" && mkdir mpfr && $(DOWNLOAD_CMD) \"$(MPFR_MIRROR)\" | gunzip - | tar --strip-components=1 -C ./mpfr -xf -"
-	sh -c "cd \"$(gccdir)\" && mkdir mpc && $(DOWNLOAD_CMD) \"$(MPC_MIRROR)\" | gunzip - | tar --strip-components=1 -C ./mpc -xf -"
-	sh -c "cd \"$(gccdir)\" && mkdir gmp && $(DOWNLOAD_CMD) \"$(GMP_MIRROR)\" | gunzip - | tar --strip-components=1 -C ./gmp -xf -"
+	sh -c "cd \"$(gccdir)\" && mkdir mpfr && $(DOWNLOAD_COMMAND) \"$(MPFR_MIRROR)\" | gunzip - | tar --strip-components=1 -C ./mpfr -xf -"
+	sh -c "cd \"$(gccdir)\" && mkdir mpc && $(DOWNLOAD_COMMAND) \"$(MPC_MIRROR)\" | gunzip - | tar --strip-components=1 -C ./mpc -xf -"
+	sh -c "cd \"$(gccdir)\" && mkdir gmp && $(DOWNLOAD_COMMAND) \"$(GMP_MIRROR)\" | gunzip - | tar --strip-components=1 -C ./gmp -xf -"
 
 
 internal-glibc-stage4:
