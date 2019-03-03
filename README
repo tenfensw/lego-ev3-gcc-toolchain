@@ -18,4 +18,4 @@ If you want to install the toolchain into a different directory, set the "prefix
 
 Then run make.
 
-While the Makefile is licensed under the OpenBSD/ISC License, the patches in the patches/ folder are not. See the patches/ folder for more info.
+Because this project aims to simplify the building of the LEGO EV3 GCC toolchain, it contains some third-party patches developed not by me, but by Free Software Foundation developers. These patches are located in the patches/ folder and are licensed under GNU LGPLv2.1 and GNU GPLv2 (except for bash scripts, which are licensed under the GNU AGPLv3 license). You can read all the licenses in the LICENSE file.
